@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="910.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controleur.ControleurAccueil">
+   <children>
+      <AnchorPane layoutX="47.0" prefHeight="572.0" prefWidth="244.0" style="-fx-background-color: #393351;">
+         <children>
+            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #68479f; -fx-background-radius: 8;">
+               <children>
+                  <Label layoutX="54.0" layoutY="18.0" text="Notre équipe" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="buttonAlban" alignment="BASELINE_LEFT" layoutY="178.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Alban Kuntz" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Alban-modified.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonThomas" alignment="BASELINE_LEFT" layoutY="236.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Thomas Basquin" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/thomas-modified.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonNathan" alignment="BASELINE_LEFT" layoutY="294.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Nathan Cours" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/nathanbb-modified.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="197.0" layoutY="-286.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <Button fx:id="buttonAllumette" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="372.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToVueAllumette" prefHeight="150.0" prefWidth="166.0" styleClass="buttonJeu" text="Allumettes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="95.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" rotate="-34.5">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="372.0" layoutY="337.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="166.0" styleClass="buttonJeu" text="Pendu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pendu.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="654.0" layoutY="126.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="166.0" styleClass="buttonJeu" text="Tic Tac Toe" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="108.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/tic%20tac%20toe.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="BOTTOM_CENTER" layoutX="654.0" layoutY="337.0" mnemonicParsing="false" prefHeight="151.0" prefWidth="166.0" styleClass="buttonJeu" text="Informations" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,21 @@
+.buttonEquipe {
+    -fx-background-color : #393351;
+}
+.buttonEquipe:hover{
+    -fx-background-color : #eb4034;
+    -fx-background-radius : 30 0 0 30;
+}
+
+.buttonJeu {
+    -fx-background-color: #695e8a;
+    -fx-background-radius : 15;
+}
+
+.buttonJeu:hover{
+    -fx-background-color : #eb4034;
+}
+
+.paneDecoration {
+    -fx-background-color: #68479f;
+    -fx-background-radius : 50;
+}
