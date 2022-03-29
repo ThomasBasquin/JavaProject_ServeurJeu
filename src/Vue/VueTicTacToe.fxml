@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1096.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurTicTacToe">
+   <children>
+      <AnchorPane layoutX="47.0" prefHeight="637.0" prefWidth="244.0" style="-fx-background-color: #393351;">
+         <children>
+            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #68479f; -fx-background-radius: 8;">
+               <children>
+                  <Label layoutX="64.0" layoutY="18.0" text="Tic Tac Toe" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="buttonRegles" alignment="BASELINE_LEFT" layoutY="178.0" mnemonicParsing="false" onAction="#openRegles" prefHeight="58.0" prefWidth="244.0" stylesheets="accueil.css" text="     Règles du jeu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/règlement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonQuitter" alignment="BASELINE_LEFT" layoutY="551.0" mnemonicParsing="false" onAction="#goToPageAccueil" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Quitter" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backtopage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="867.0" layoutY="585.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+   </children>
+</Pane>

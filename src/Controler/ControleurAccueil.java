@@ -21,8 +21,10 @@ public class ControleurAccueil {
     private Parent root;
 
 
+
     @FXML
     private Button buttonAlban;
+
 
     @FXML
     private Button buttonNathan;
@@ -49,6 +51,14 @@ public class ControleurAccueil {
 
     public void goToVueAllumette(ActionEvent actionEvent) throws IOException {
         root = FXMLLoader.load(getClass().getResource("../Vue/VueAllumette.fxml"));
+        scene = new Scene(root);
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void goToVueTicTacToe(ActionEvent actionEvent) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("../Vue/VueTicTacToe.fxml"));
         scene = new Scene(root);
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);

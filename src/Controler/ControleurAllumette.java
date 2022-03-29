@@ -91,8 +91,7 @@ public class ControleurAllumette implements Initializable {
 
 
     public void initializationPartie() throws IOException {
-        InputStream stream = new FileInputStream("C:\\Users\\cours\\Desktop\\Cours 2annee DUT\\Projet_Java\\Jeux-RMI\\JavaProject_ServeurJeu\\src\\Vue\\images\\Allumette.png");
-        Image image = new Image(stream);
+        Image image = new Image("./Vue/images/Allumette.png");
         allAllumette.add(allumette1);
         allAllumette.add(allumette2);
         allAllumette.add(allumette3);
