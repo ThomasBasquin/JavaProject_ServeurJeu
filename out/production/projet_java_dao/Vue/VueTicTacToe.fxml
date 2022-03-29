@@ -56,6 +56,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <Pane layoutX="867.0" layoutY="585.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <Pane layoutX="867.0" layoutY="587.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
    </children>
 </Pane>

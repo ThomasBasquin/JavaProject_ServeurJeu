@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControleurTicTacToe {
+public class ControleurPendu {
 
     private Stage stage;
     private Scene scene;
@@ -37,8 +37,8 @@ public class ControleurTicTacToe {
     void openRegles(ActionEvent event) {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
-        dialog.setTitle("Regles du jeu - Tic Tac Toe");
-        dialog.setContentText("Le jeu tic tac toe est un jeu de maternelle voila");
+        dialog.setTitle("Regles du jeu - Le pendu");
+        dialog.setContentText("Le pendu c'est mal");
         dialog.showAndWait();
     }
 

@@ -84,7 +84,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="433.0" layoutY="367.0" mnemonicParsing="false" prefHeight="173.0" prefWidth="190.0" styleClass="buttonJeu" text="Pendu" textFill="WHITE">
+      <Button fx:id="buttonPendu" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="433.0" layoutY="367.0" mnemonicParsing="false" onAction="#goToVuePendu" prefHeight="173.0" prefWidth="190.0" styleClass="buttonJeu" text="Pendu" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

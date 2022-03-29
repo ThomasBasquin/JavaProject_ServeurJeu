@@ -3,7 +3,11 @@ package Controler;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
@@ -27,6 +31,10 @@ import java.util.ResourceBundle;
 
 
 public class ControleurAllumette implements Initializable {
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     ArrayList<ImageView> allAllumette = new ArrayList<>();
 
@@ -139,7 +147,6 @@ public class ControleurAllumette implements Initializable {
 
     }
 
-
     public void setLabel(){
         nbAllumetteJ.setText(Integer.toString(allumette.getjoueurNbAllumette()));
         nbAllumetteO.setText(Integer.toString(allumette.getordinateurNbAllumette()));
@@ -239,4 +246,19 @@ public class ControleurAllumette implements Initializable {
 
     }
 
+    public void openRegles(ActionEvent actionEvent) {
+        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setResizable(false);
+        dialog.setTitle("Regles du jeu - Allumettes");
+        dialog.setContentText("Les allumettes ca brule");
+        dialog.showAndWait();
+    }
+
+    public void goToPageAccueil(ActionEvent actionEvent) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("../Vue/VueAccueil.fxml"));
+        scene = new Scene(root);
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }

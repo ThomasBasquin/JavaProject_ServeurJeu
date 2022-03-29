@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1096.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurAllumette">
+   <children>
+      <AnchorPane layoutX="47.0" prefHeight="637.0" prefWidth="244.0" style="-fx-background-color: #393351;">
+         <children>
+            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #68479f; -fx-background-radius: 8;">
+               <children>
+                  <Label layoutX="66.0" layoutY="18.0" text="Allumettes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="buttonRegles" alignment="BASELINE_LEFT" layoutY="178.0" mnemonicParsing="false" onAction="#openRegles" prefHeight="58.0" prefWidth="244.0" stylesheets="accueil.css" text="     Règles du jeu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/règlement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonQuitter" alignment="BASELINE_LEFT" layoutY="551.0" mnemonicParsing="false" onAction="#goToPageAccueil" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Quitter" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backtopage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttonEquipe" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="867.0" layoutY="587.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <HBox alignment="CENTER" layoutX="330.0" layoutY="245.0" prefHeight="239.0" prefWidth="642.0">
+         <children>
+            <ImageView fx:id="allumette1" fitHeight="168.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette2" fitHeight="215.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette3" fitHeight="193.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette4" fitHeight="158.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette5" fitHeight="237.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette6" fitHeight="220.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette7" fitHeight="204.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette8" fitHeight="225.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette9" fitHeight="229.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette10" fitHeight="209.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="allumette11" fitHeight="222.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Allumette.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label layoutX="330.0" layoutY="51.0" text="Coup Ordinateur :" textFill="WHITE" />
+      <Label fx:id="AllumetteEnlever" layoutX="434.0" layoutY="51.0" prefHeight="17.0" prefWidth="25.0" textFill="WHITE" />
+      <Label layoutX="330.0" layoutY="79.0" prefHeight="18.0" prefWidth="149.0" text="Nombre d'allumette joueur:" textFill="WHITE" />
+      <Label fx:id="nbAllumetteJ" layoutX="479.0" layoutY="79.0" prefHeight="18.0" prefWidth="92.0" textFill="WHITE" />
+      <Label layoutX="330.0" layoutY="104.0" prefHeight="18.0" prefWidth="143.0" text="Nombre d'allumette ordi" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="nbAllumetteO" layoutX="479.0" layoutY="104.0" prefHeight="18.0" prefWidth="92.0" textFill="WHITE" />
+      <Label layoutX="330.0" layoutY="128.0" prefHeight="18.0" prefWidth="143.0" text="Allumette restant :" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="nbAllumetteR" layoutX="433.0" layoutY="128.0" prefHeight="18.0" prefWidth="92.0" textFill="WHITE" />
+      <Button fx:id="button1" layoutX="447.0" layoutY="556.0" mnemonicParsing="false" onAction="#suppr1" text="-1 Allumette" />
+      <Button fx:id="btn2" layoutX="548.0" layoutY="556.0" mnemonicParsing="false" onAction="#suppr2" text="-2 Allumette" />
+   </children>
+</Pane>

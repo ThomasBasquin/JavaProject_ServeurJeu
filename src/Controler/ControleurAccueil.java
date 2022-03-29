@@ -50,7 +50,7 @@ public class ControleurAccueil {
     }
 
     public void goToVueAllumette(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../Vue/VueAllumette.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../Vue/VueAllumette2.fxml"));
         scene = new Scene(root);
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -59,6 +59,14 @@ public class ControleurAccueil {
 
     public void goToVueTicTacToe(ActionEvent actionEvent) throws IOException {
         root = FXMLLoader.load(getClass().getResource("../Vue/VueTicTacToe.fxml"));
+        scene = new Scene(root);
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void goToVuePendu(ActionEvent actionEvent) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("../Vue/VuePendu.fxml"));
         scene = new Scene(root);
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
