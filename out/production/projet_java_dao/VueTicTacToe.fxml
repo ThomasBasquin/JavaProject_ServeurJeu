@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutX="47.0" prefHeight="637.0" prefWidth="244.0" style="-fx-background-color: #393351;">
          <children>
-            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #68479f; -fx-background-radius: 8;">
+            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #eb4034; -fx-background-radius: 8;">
                <children>
                   <Label layoutX="64.0" layoutY="18.0" text="Tic Tac Toe" textFill="WHITE">
                      <font>
