@@ -12,16 +12,30 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurAllumette">
    <top>
-      <VBox alignment="CENTER" prefHeight="51.0" prefWidth="683.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="962.0" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="--Bienvenue sur le jeux des allumettes --" textAlignment="CENTER" />
-            <Label text="Coup Ordinateur :" />
-            <Label fx:id="AllumetteEnlever" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Coup Ordinateur :" />
+                  <Label fx:id="AllumetteEnlever" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="6.0" prefWidth="962.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="149.0" text="Nombre d'allumette joueur:" />
+                  <Label fx:id="nbAllumetteJ" prefHeight="18.0" prefWidth="92.0" />
+                  <Label prefHeight="18.0" prefWidth="143.0" text="Nombre d'allumette ordi" textAlignment="CENTER" />
+                  <Label fx:id="nbAllumetteO" prefHeight="18.0" prefWidth="92.0" />
+                  <Label prefHeight="18.0" prefWidth="143.0" text="Allumette restant :" textAlignment="CENTER" />
+                  <Label fx:id="nbAllumetteR" prefHeight="18.0" prefWidth="92.0" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="683.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="34.0" prefWidth="962.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="button1" mnemonicParsing="false" onAction="#suppr1" text="-1 Allumette" />
             <Button fx:id="btn2" mnemonicParsing="false" onAction="#suppr2" text="-2 Allumette" />
@@ -29,7 +43,7 @@
       </HBox>
    </bottom>
    <center>
-      <HBox prefHeight="291.0" prefWidth="911.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="318.0" prefWidth="986.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="allumette1" fitHeight="290.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
                <image>

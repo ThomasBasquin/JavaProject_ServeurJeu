@@ -9,13 +9,15 @@ import javafx.scene.control.Button;
 
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import Model.methode.methodeAllumette.ImplAllumette;
 import Model.methode.methodeAllumette.InterfaceAllumette;
 
-
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -70,6 +72,14 @@ public class ControleurAllumette implements Initializable {
     @FXML
     private Button btn2;
 
+    @FXML
+    private Label nbAllumetteJ;
+
+    @FXML
+    private Label nbAllumetteO;
+
+    @FXML
+    private Label nbAllumetteR;
 
 
     ImplAllumette allumette = new ImplAllumette();
@@ -81,6 +91,8 @@ public class ControleurAllumette implements Initializable {
 
 
     public void initializationPartie() throws IOException {
+        InputStream stream = new FileInputStream("C:\\Users\\cours\\Desktop\\Cours 2annee DUT\\Projet_Java\\Jeux-RMI\\JavaProject_ServeurJeu\\src\\Vue\\images\\Allumette.png");
+        Image image = new Image(stream);
         allAllumette.add(allumette1);
         allAllumette.add(allumette2);
         allAllumette.add(allumette3);
@@ -93,14 +105,27 @@ public class ControleurAllumette implements Initializable {
         allAllumette.add(allumette10);
         allAllumette.add(allumette11);
 
+        allumette1.setImage(image);
+        allumette2.setImage(image);
+        allumette3.setImage(image);
+        allumette4.setImage(image);
+        allumette5.setImage(image);
+        allumette6.setImage(image);
+        allumette7.setImage(image);
+        allumette8.setImage(image);
+        allumette9.setImage(image);
+        allumette10.setImage(image);
+        allumette11.setImage(image);
+
+        btn2.setDisable(false);
+        allumette.setNbAllumette(11);
+        allumette.setordinateurNbAllumette(0);
+        allumette.setjoueurNbAllumette(0);
         int coup = allumette.coupOrdinateur();
         if (coup == 1){
-            allumette.setOrdinateur(true);
             coupOrdinateur();
-        }else{
-            allumette.setJoueur(true);
         }
-        allumette.setNbAllumette(11);
+
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -115,15 +140,28 @@ public class ControleurAllumette implements Initializable {
 
     }
 
-    void checkFini(int nbAllumette) throws IOException {
-           if (allumette.checkFini(nbAllumette)){
-                if (allumette.joueurVainqueur()){
-                    showConfirmation("Perdu");
-                }else{
-                    showConfirmation("Gagner");
-                }
-           }
 
+    public void setLabel(){
+        nbAllumetteJ.setText(Integer.toString(allumette.getjoueurNbAllumette()));
+        nbAllumetteO.setText(Integer.toString(allumette.getordinateurNbAllumette()));
+        nbAllumetteR.setText(Integer.toString(allumette.getNbAllumette()));
+
+    }
+    public void checkFini() throws IOException {
+        System.out.println("NbAllumette restant :" +allumette.getNbAllumette());
+        System.out.println("nb Allumette Joueur : "+allumette.getjoueurNbAllumette());
+        System.out.println("nb Allumette Ordi : "+allumette.getordinateurNbAllumette());
+        System.out.println("go :" +allumette.checkFini());
+
+        setLabel();
+
+        if (allumette.checkFini()){
+            if (allumette.joueurVainqueur()){
+                Rejouer("Gagnee");
+            }else{
+                Rejouer("Perdu");
+            }
+        }
     }
 
     boolean resteUn(){
@@ -136,25 +174,20 @@ public class ControleurAllumette implements Initializable {
     }
 
     void enleverImage(int nb){
-        if (allumette.getNbAllumette() == 1){
+
+        for (int i = 1; i <= nb; i++) {
             allAllumette.get(allAllumette.size()-1).setImage(null);
-            allAllumette.remove(allAllumette.size()-1);
-            allumette.setNbAllumette(allumette.getNbAllumette()-1);
-        }else {
-            for (int i = 1; i <= nb; i++) {
-                allAllumette.get(allAllumette.size() - 1).setImage(null);
-                allAllumette.remove(allAllumette.size() - 1);
-                allumette.setNbAllumette(allumette.getNbAllumette() - 1);
-            }
+            allAllumette.remove(allAllumette.size() - 1);
+            allumette.setNbAllumette(allumette.getNbAllumette() - 1);
         }
     }
 
-    private void showConfirmation(String res) throws IOException {
+    private void Rejouer(String res) throws IOException {
         String message;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(res);
         if (res.contains("P")){
-            message = "Désoler vous avez perdu pour gagner il faut prendre la dernière allumette";
+            message = "Désoler vous devez posséder un nombre impair d'allumette";
         }else{
             message ="Bravo vous avez gagner";
         }
@@ -170,15 +203,15 @@ public class ControleurAllumette implements Initializable {
             Stage stage =(Stage) btn2.getScene().getWindow();
             stage.close();
         }
+
     }
 
     @FXML
     void suppr1(ActionEvent event) throws IOException{
         resteUn();
         enleverImage(1);
-        System.out.println("coup Joueur");
-        allumette.Tourde(false);
-        checkFini(1);
+        allumette.setjoueurNbAllumette(allumette.getjoueurNbAllumette()+1);
+        checkFini();
 
         coupOrdinateur();
     }
@@ -187,10 +220,9 @@ public class ControleurAllumette implements Initializable {
     void suppr2(ActionEvent event) throws IOException{
         resteUn();
         enleverImage(2);
-        System.out.println("coup Joueur");
-        allumette.Tourde(false);
-        checkFini(2);
+        allumette.setjoueurNbAllumette(allumette.getjoueurNbAllumette()+2);
 
+        checkFini();
         coupOrdinateur();
     }
 
@@ -198,12 +230,11 @@ public class ControleurAllumette implements Initializable {
 
         int coup = allumette.coupOrdinateur();
         if(resteUn()){
-           coup =1;
+           coup = 1;
         }
-        enleverImage(1);
-        System.out.println("coup ordinateur");
-        allumette.Tourde(false);
-        checkFini(coup);
+        allumette.setordinateurNbAllumette(allumette.getordinateurNbAllumette()+coup);
+        enleverImage(coup);
+        checkFini();
 
         AllumetteEnlever.setText(Integer.toString(coup));
 
