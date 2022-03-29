@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutX="47.0" prefHeight="637.0" prefWidth="244.0" style="-fx-background-color: #393351;">
          <children>
-            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #68479f; -fx-background-radius: 8;">
+            <Pane layoutY="81.0" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: #eb4034; -fx-background-radius: 8;">
                <children>
                   <Label layoutX="54.0" layoutY="18.0" text="Notre équipe" textFill="WHITE">
                      <font>
@@ -72,7 +72,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Pane layoutX="197.0" layoutY="-286.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <Pane layoutX="197.0" layoutY="-286.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" style="-fx-background-color: #68479f;" styleClass="paneDecoration" />
       <Button fx:id="buttonAllumette" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="433.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToVueAllumette" prefHeight="173.0" prefWidth="190.0" styleClass="buttonJeu" text="Allumettes" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />

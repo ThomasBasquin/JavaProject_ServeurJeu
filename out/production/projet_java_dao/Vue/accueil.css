@@ -6,6 +6,11 @@
     -fx-background-radius : 30 0 0 30;
 }
 
+.buttonEquipe:pressed{
+    -fx-background-color : #b82e25;
+}
+
+
 .buttonJeu {
     -fx-background-color: #695e8a;
     -fx-background-radius : 15;
