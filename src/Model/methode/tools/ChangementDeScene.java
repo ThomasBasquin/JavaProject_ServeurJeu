@@ -1,4 +1,4 @@
-package methode.tools;
+package Model.methode.tools;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

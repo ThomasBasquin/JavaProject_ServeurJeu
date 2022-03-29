@@ -1,27 +1,20 @@
-package javafx.controleur;
+package Controler;
 
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import methode.methodeAllumette.ImplAllumette;
-import methode.methodeAllumette.InterfaceAllumette;
+import Model.methode.methodeAllumette.ImplAllumette;
+import Model.methode.methodeAllumette.InterfaceAllumette;
 
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.Naming;

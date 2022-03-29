@@ -12,7 +12,7 @@ public class Client extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../javafx/vue/VueAccueil.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Vue/VueAccueil.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Jeux des Allumettes");
         stage.setScene(scene);

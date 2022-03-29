@@ -1,6 +1,6 @@
 package main;
 
-import methode.methodeAllumette.ImplAllumette;
+import Model.methode.methodeAllumette.ImplAllumette;
 
 
 import java.rmi.*;

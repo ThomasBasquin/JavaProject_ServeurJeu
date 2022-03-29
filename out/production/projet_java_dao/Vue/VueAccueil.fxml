@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="910.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controleur.ControleurAccueil">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="910.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurAccueil">
    <children>
       <AnchorPane layoutX="47.0" prefHeight="572.0" prefWidth="244.0" style="-fx-background-color: #393351;">
          <children>
@@ -22,7 +22,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="buttonAlban" alignment="BASELINE_LEFT" layoutY="178.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Alban Kuntz" textFill="WHITE">
+            <Button fx:id="buttonAlban" alignment="BASELINE_LEFT" layoutY="178.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@Vue/accueil.css" text="     Alban Kuntz" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -54,12 +54,12 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
-            <Button fx:id="buttonNathan" alignment="BASELINE_LEFT" layoutY="294.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@accueil.css" text="     Nathan Cours" textFill="WHITE">
+            <Button fx:id="buttonNathan" alignment="BASELINE_LEFT" layoutY="294.0" mnemonicParsing="false" onAction="#goToGitHub" prefHeight="58.0" prefWidth="244.0" stylesheets="@Vue/accueil.css" text="     Nathan Cours" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="46.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="43.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/nathanbb-modified.png" />
                      </image>

@@ -1,4 +1,4 @@
-package javafx.controleur;
+package Controler;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,7 +48,7 @@ public class ControleurAccueil {
     }
 
     public void goToVueAllumette(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../vue/VueAllumette.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../Vue/VueAllumette.fxml"));
         scene = new Scene(root);
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);

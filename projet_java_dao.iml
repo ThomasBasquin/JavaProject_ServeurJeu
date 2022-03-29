@@ -5,6 +5,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/javafx/vue" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/out/production/projet_java_dao/Model" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/out/production/projet_java_dao/Vue/images" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Vue" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/out/production/projet_java_dao/Model" />
+      <excludeFolder url="file://$MODULE_DIR$/out/production/projet_java_dao/Vue/images" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
