@@ -3,10 +3,13 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1096.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurPendu">
@@ -57,5 +60,18 @@
          </children>
       </AnchorPane>
       <Pane layoutX="867.0" layoutY="585.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <Line fx:id="pendu1" endX="88.506103515625" layoutX="575.0" layoutY="286.0" startX="-48.493896484375" strokeWidth="5.0" />
+      <Line fx:id="pendu2" endX="2.506103515625" endY="-142.73486328125" layoutX="592.0" layoutY="232.0" startX="2.506103515625" startY="52.26513671875" strokeWidth="3.0" />
+      <Line fx:id="pendu3" endX="89.506103515625" layoutX="694.0" layoutY="88.0" startX="-100.0" strokeWidth="3.0" />
+      <Line fx:id="pendu5" endX="-100.0" endY="39.26513671875" layoutX="855.0" layoutY="89.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu4" endX="-54.493896484375" endY="-40.73486328125" layoutX="697.0" layoutY="130.0" startX="-100.0" strokeWidth="3.0" />
+      <Circle fx:id="pendu6" layoutX="756.0" layoutY="139.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="pendu7" endX="-100.0" endY="93.26513671875" layoutX="856.0" layoutY="147.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu10" endX="-67.493896484375" endY="39.26513671875" layoutX="855.0" layoutY="241.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu8" endX="-125.493896484375" endY="31.26513671875" layoutX="882.0" layoutY="168.0" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
+      <Line fx:id="pendu11" endX="-67.493896484375" endY="39.26513671875" layoutX="824.0" layoutY="240.0" rotate="80.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu9" endX="-125.493896484375" endY="31.26513671875" layoutX="852.0" layoutY="169.0" rotate="84.6" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
+      <TextField fx:id="tfpendu" layoutX="592.0" layoutY="357.0" prefWidth="158.0" />
+      <Button fx:id="butttonRestart" layoutX="383.0" layoutY="544.0" mnemonicParsing="false" text="Recommencez" />
    </children>
 </Pane>
