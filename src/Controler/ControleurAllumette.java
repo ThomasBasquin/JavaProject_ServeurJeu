@@ -16,12 +16,10 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import Model.methode.methodeAllumette.ImplAllumette;
-import Model.methode.methodeAllumette.InterfaceAllumette;
+import Model.methodeAllumette.ImplAllumette;
+import Model.methodeAllumette.InterfaceAllumette;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.RemoteException;

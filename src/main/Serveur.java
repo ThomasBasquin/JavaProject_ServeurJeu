@@ -1,6 +1,7 @@
 package main;
 
-import Model.methode.methodeAllumette.ImplAllumette;
+import Model.methodeAllumette.ImplAllumette;
+import Model.methodePendu.ImplPendu;
 
 
 import java.rmi.*;
@@ -11,14 +12,24 @@ public class Serveur {
 
     public static void main(String[] args){
         try {
-            int port = 8000;
-
+            int port = 8000; //port
             LocateRegistry.createRegistry(port);
-            Naming.rebind ("rmi://localhost:"+port+"/allumette", new ImplAllumette());
+
+            //Jeu des allumettes
+            ImplAllumette allumette = new ImplAllumette();
+            Naming.rebind ("rmi://localhost:" + port + "/allumette", allumette);
+
+            //Jeu du pendu
+            ImplPendu pendu = new ImplPendu();
+            Naming.rebind("rmi://localhost:" + port + "/pendu", pendu);
+            //Jeu tic tac toe
+
+
+
             System.out.println ("Jeu Server pret !");
 
         }catch (Exception e){
-            System.out.println("Problème avec le serveur:"+e);
+            System.out.println("Problème avec le serveur: " + e);
         }
     }
 }

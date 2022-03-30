@@ -15,7 +15,7 @@ public class Client extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../Vue/VueAccueil.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Jeux des Allumettes");
+        stage.setTitle("Games");
         stage.setResizable(false);
         stage.getIcons().add(new Image("./Vue/images/logo.png"));
         stage.setScene(scene);

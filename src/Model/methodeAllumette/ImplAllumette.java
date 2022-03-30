@@ -1,4 +1,4 @@
-package Model.methode.methodeAllumette;
+package Model.methodeAllumette;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;
