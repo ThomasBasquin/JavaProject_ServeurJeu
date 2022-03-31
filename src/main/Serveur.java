@@ -2,6 +2,7 @@ package main;
 
 import Model.methodeAllumette.ImplAllumette;
 import Model.methodePendu.ImplPendu;
+import Model.methodeTicTacToe.implTicTacToe;
 
 
 import java.rmi.*;
@@ -24,8 +25,8 @@ public class Serveur {
             Naming.rebind("rmi://localhost:" + port + "/pendu", pendu);
 
             //Jeu tic tac toe
-
-
+            implTicTacToe TicTacToe = new implTicTacToe();
+            Naming.rebind("rmi://localhost:" + port + "/TicTacToe", TicTacToe);
 
             System.out.println ("Jeu Server pret !");
 

@@ -57,5 +57,50 @@
          </children>
       </AnchorPane>
       <Pane layoutX="867.0" layoutY="587.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
+      <Button fx:id="btn1" layoutX="458.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer1" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn2" layoutX="640.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer2" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn3" layoutX="817.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer3" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn4" layoutX="458.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer4" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn5" layoutX="640.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer5" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn6" layoutX="817.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer6" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn7" layoutX="458.0" layoutY="421.0" mnemonicParsing="false" onAction="#boutonCliquer7" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn8" layoutX="640.0" layoutY="421.0" mnemonicParsing="false" onAction="#boutonCliquer8" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn9" layoutX="817.0" layoutY="421.0" mnemonicParsing="false" onAction="#boutonCliquer9" prefHeight="150.0" prefWidth="150.0">
+         <font>
+            <Font name="Berlin Sans FB" size="70.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
