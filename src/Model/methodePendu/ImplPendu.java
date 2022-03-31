@@ -2,11 +2,12 @@ package Model.methodePendu;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-public class ImplPendu extends UnicastRemoteObject implements InterfacePendu{
+public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Serializable {
 
     ArrayList<String> dictionnaire;
     ArrayList<String> motChoisit;

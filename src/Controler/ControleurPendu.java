@@ -83,7 +83,12 @@ public class ControleurPendu implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        try {
+            int port = 8000;
+            pendu = (InterfacePendu) Naming.lookup("rmi://localhost:" + port + "/pendu"); //Recherche du serveur
+        } catch (Exception e) {
+            System.out.println("Client exception: " + e);
+        }
 
     }
 
