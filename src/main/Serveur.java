@@ -22,6 +22,7 @@ public class Serveur {
             //Jeu du pendu
             ImplPendu pendu = new ImplPendu();
             Naming.rebind("rmi://localhost:" + port + "/pendu", pendu);
+
             //Jeu tic tac toe
 
 
