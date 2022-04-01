@@ -195,9 +195,6 @@ public class ControleurPendu implements Initializable {
 
         if (option.get() == ButtonType.OK) {
             initializationPartie();
-        } else if (option.get() == ButtonType.CANCEL) {
-            Stage stage =(Stage) pendu1.getScene().getWindow();
-            stage.close();
         }
 
     }

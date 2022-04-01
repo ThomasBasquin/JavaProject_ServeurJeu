@@ -57,23 +57,38 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
+            <Button fx:id="buttonRestart" alignment="BASELINE_LEFT" layoutY="491.0" mnemonicParsing="false" onAction="#RejouerPendu" prefHeight="60.0" prefWidth="244.0" styleClass="buttonEquipe" text="    Recommencer" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/restart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Pane layoutX="867.0" layoutY="585.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
-      <Line fx:id="pendu1" endX="88.506103515625" layoutX="575.0" layoutY="286.0" startX="-48.493896484375" strokeWidth="5.0" />
-      <Line fx:id="pendu2" endX="2.506103515625" endY="-142.73486328125" layoutX="592.0" layoutY="232.0" startX="2.506103515625" startY="52.26513671875" strokeWidth="3.0" />
-      <Line fx:id="pendu3" endX="89.506103515625" layoutX="694.0" layoutY="88.0" startX="-100.0" strokeWidth="3.0" />
-      <Line fx:id="pendu5" endX="-100.0" endY="39.26513671875" layoutX="855.0" layoutY="89.0" startX="-100.0" strokeWidth="2.0" />
-      <Line fx:id="pendu4" endX="-54.493896484375" endY="-40.73486328125" layoutX="697.0" layoutY="130.0" startX="-100.0" strokeWidth="3.0" />
-      <Circle fx:id="pendu6" layoutX="756.0" layoutY="139.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
-      <Line fx:id="pendu7" endX="-100.0" endY="93.26513671875" layoutX="856.0" layoutY="147.0" startX="-100.0" strokeWidth="2.0" />
-      <Line fx:id="pendu10" endX="-67.493896484375" endY="39.26513671875" layoutX="855.0" layoutY="241.0" startX="-100.0" strokeWidth="2.0" />
-      <Line fx:id="pendu8" endX="-125.493896484375" endY="31.26513671875" layoutX="882.0" layoutY="168.0" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
-      <Line fx:id="pendu11" endX="-67.493896484375" endY="39.26513671875" layoutX="824.0" layoutY="240.0" rotate="80.0" startX="-100.0" strokeWidth="2.0" />
-      <Line fx:id="pendu9" endX="-125.493896484375" endY="31.26513671875" layoutX="852.0" layoutY="169.0" rotate="84.6" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
-      <TextField fx:id="tfpendu" layoutX="587.0" layoutY="382.0" onAction="#onEnter" prefWidth="158.0" />
-      <Button fx:id="buttonRestart" layoutX="383.0" layoutY="544.0" mnemonicParsing="false" onAction="#RejouerPendu" text="Recommencez" />
-      <Label fx:id="labelMot" alignment="CENTER" layoutX="364.0" layoutY="301.0" prefHeight="70.0" prefWidth="637.0" textFill="WHITE">
+      <Pane layoutX="509.0" layoutY="44.0" prefHeight="307.0" prefWidth="488.0" style="-fx-border-color: #000000;" />
+      <Line fx:id="pendu1" endX="88.506103515625" layoutX="639.0" layoutY="279.0" startX="-48.493896484375" strokeWidth="5.0" />
+      <Line fx:id="pendu2" endX="2.506103515625" endY="-142.73486328125" layoutX="656.0" layoutY="225.0" startX="2.506103515625" startY="52.26513671875" strokeWidth="3.0" />
+      <Line fx:id="pendu3" endX="89.506103515625" layoutX="758.0" layoutY="81.0" startX="-100.0" strokeWidth="3.0" />
+      <Line fx:id="pendu5" endX="-100.0" endY="39.26513671875" layoutX="919.0" layoutY="82.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu4" endX="-54.493896484375" endY="-40.73486328125" layoutX="761.0" layoutY="123.0" startX="-100.0" strokeWidth="3.0" />
+      <Circle fx:id="pendu6" layoutX="820.0" layoutY="132.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="pendu7" endX="-100.0" endY="93.26513671875" layoutX="920.0" layoutY="140.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu10" endX="-67.493896484375" endY="39.26513671875" layoutX="919.0" layoutY="234.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu8" endX="-125.493896484375" endY="31.26513671875" layoutX="946.0" layoutY="161.0" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
+      <Line fx:id="pendu11" endX="-67.493896484375" endY="39.26513671875" layoutX="888.0" layoutY="233.0" rotate="80.0" startX="-100.0" strokeWidth="2.0" />
+      <Line fx:id="pendu9" endX="-125.493896484375" endY="31.26513671875" layoutX="916.0" layoutY="162.0" rotate="84.6" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
+      <TextField fx:id="tfpendu" layoutX="615.0" layoutY="444.0" onAction="#onEnter" prefHeight="51.0" prefWidth="277.0" promptText="Quel est votre lettre ?">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></TextField>
+      <Label fx:id="labelMot" alignment="CENTER" layoutX="435.0" layoutY="342.0" prefHeight="70.0" prefWidth="637.0" text="_____" textFill="WHITE">
          <font>
             <Font size="48.0" />
          </font>
