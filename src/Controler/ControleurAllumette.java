@@ -152,10 +152,6 @@ public class ControleurAllumette implements Initializable {
 
     }
     public void checkFini() throws IOException {
-        System.out.println("NbAllumette restant :" +allumette.getNbAllumette());
-        System.out.println("nb Allumette Joueur : "+allumette.getjoueurNbAllumette());
-        System.out.println("nb Allumette Ordi : "+allumette.getordinateurNbAllumette());
-        System.out.println("go :" +allumette.checkFini());
 
         setLabel();
 
@@ -191,7 +187,7 @@ public class ControleurAllumette implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(res);
         if (res.contains("P")){
-            message = "Désoler vous devez posséder un nombre impair d'allumette";
+            message = "Desoler vous devez posseder un nombre impair d'allumette";
         }else{
             message ="Bravo vous avez gagner";
         }
@@ -203,9 +199,6 @@ public class ControleurAllumette implements Initializable {
 
         if (option.get() == ButtonType.OK) {
             initializationPartie();
-        } else if (option.get() == ButtonType.CANCEL) {
-            Stage stage =(Stage) btn2.getScene().getWindow();
-            stage.close();
         }
 
     }
@@ -258,5 +251,9 @@ public class ControleurAllumette implements Initializable {
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void RejouerAllumette(ActionEvent actionEvent) throws IOException {
+        initializationPartie();
     }
 }

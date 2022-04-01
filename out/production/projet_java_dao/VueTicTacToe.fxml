@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1096.0" style="-fx-background-color: #2f2b43;" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ControleurTicTacToe">
@@ -54,35 +55,47 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
+            <Button fx:id="buttonRestart" alignment="BASELINE_LEFT" layoutY="487.0" mnemonicParsing="false" onAction="#RejouerTicTacToe" prefHeight="60.0" prefWidth="244.0" styleClass="buttonEquipe" text="    Recommencer" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/restart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Pane layoutX="867.0" layoutY="587.0" prefHeight="367.0" prefWidth="624.0" rotate="25.3" styleClass="paneDecoration" />
-      <Button fx:id="btn1" layoutX="458.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer1" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn1" layoutX="458.0" layoutY="81.0" mnemonicParsing="false" onAction="#boutonCliquer1" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="btn2" layoutX="640.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer2" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn2" layoutX="640.0" layoutY="81.0" mnemonicParsing="false" onAction="#boutonCliquer2" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="btn3" layoutX="817.0" layoutY="87.0" mnemonicParsing="false" onAction="#boutonCliquer3" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn3" layoutX="817.0" layoutY="81.0" mnemonicParsing="false" onAction="#boutonCliquer3" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="btn4" layoutX="458.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer4" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn4" layoutX="458.0" layoutY="253.0" mnemonicParsing="false" onAction="#boutonCliquer4" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="btn5" layoutX="640.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer5" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn5" layoutX="640.0" layoutY="253.0" mnemonicParsing="false" onAction="#boutonCliquer5" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="btn6" layoutX="817.0" layoutY="257.0" mnemonicParsing="false" onAction="#boutonCliquer6" prefHeight="150.0" prefWidth="150.0">
+      <Button fx:id="btn6" layoutX="817.0" layoutY="253.0" mnemonicParsing="false" onAction="#boutonCliquer6" prefHeight="150.0" prefWidth="150.0">
          <font>
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
@@ -102,5 +115,9 @@
             <Font name="Berlin Sans FB" size="70.0" />
          </font>
       </Button>
+      <Line endX="554.3060913085938" endY="7.465118408203125" layoutX="452.0" layoutY="404.0" startX="-28.8939208984375" startY="7.465118408203125" strokeWidth="4.0" />
+      <Line endX="554.3060913085938" endY="7.465118408203125" layoutX="459.0" layoutY="235.0" startX="-28.8939208984375" startY="7.465118408203125" strokeWidth="4.0" />
+      <Line endX="343.30609130859375" endY="182.065185546875" layoutX="462.0" layoutY="414.0" startX="343.30609130859375" startY="-358.73486328125" strokeWidth="4.0" />
+      <Line endX="343.30609130859375" endY="182.065185546875" layoutX="281.0" layoutY="416.0" startX="343.30609130859375" startY="-358.73486328125" strokeWidth="4.0" />
    </children>
 </Pane>

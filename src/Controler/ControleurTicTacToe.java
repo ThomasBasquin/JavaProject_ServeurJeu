@@ -62,6 +62,11 @@ public class ControleurTicTacToe implements Initializable {
     @FXML
     private Button buttonRegles;
 
+    @FXML
+    private Button buttonRestart;
+
+
+
     public ControleurTicTacToe() throws RemoteException {
     }
 
@@ -123,12 +128,17 @@ public class ControleurTicTacToe implements Initializable {
         TTT = new implTicTacToe();
     };
 
+    @FXML
+    void RejouerTicTacToe(ActionEvent event) throws RemoteException {
+        initializationPartie();
+    }
+
     private void Rejouer(int res) throws IOException {
         String message;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Résultats");
+        alert.setTitle("Resultats");
         if (res == 1){
-            message = "Désoler vous avez perdu";
+            message = "Desoler vous avez perdu";
         }else if (res == 2){
             message ="Bravo vous avez gagner";
         }else{
