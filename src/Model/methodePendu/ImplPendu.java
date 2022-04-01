@@ -33,18 +33,29 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(dictionnaire);
 
     }
 
     @Override
     public void setMot() throws RemoteException {
+        motChoisit.add(0,dictionnaire.get((int) (Math.random() * dictionnaire.size())));
+    }
 
+    @Override
+    public String getMot() throws RemoteException {
+        return motChoisit.get(0);
     }
 
     @Override
     public void setLettresDuMot() throws RemoteException {
+        for (int i = 0; i < motChoisit.get(0).length(); i++) {
+            lettresDuMot.add(motChoisit.get(0).charAt(i));
+        }
+    }
 
+    @Override
+    public ArrayList<Character> getLettresDuMot() throws RemoteException {
+        return lettresDuMot;
     }
 
     @Override
@@ -54,11 +65,24 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
 
     @Override
     public String affichageDuMotUnderscore() throws RemoteException {
-        return null;
+        String mot = new String();
+        for(int i = 0; i < motChoisit.get(0).length(); i++) {
+            mot = mot + '_';
+        }
+        return mot;
     }
 
     @Override
     public String affichageDuMot(char c) throws RemoteException {
-        return null;
+        String mot = new String();
+
+        for(int i = 0; i < lettresDuMot.size(); i++) {
+            if(lettresDuMot.get(i) == c) {
+                mot = mot + c;
+            } else if (lettresDuMot.get(i) != c) {
+                mot = mot + '_';
+            }
+        }
+        return mot;
     }
 }
