@@ -1,12 +1,15 @@
 package Controler;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -34,6 +37,8 @@ public class ControleurAccueil {
 
     @FXML
     public Button buttonAllumette;
+    @FXML
+    private Button buttonInfo;
 
 
     @FXML
@@ -71,5 +76,13 @@ public class ControleurAccueil {
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void openInfo(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informations");
+        alert.setHeaderText("Projet Programmation repartie");
+        alert.setContentText("Pour plus d'informations, consultez notre GitHub : https://github.com/ThomasBasquin/JavaProject_ServeurJeu");
+        alert.showAndWait();
     }
 }

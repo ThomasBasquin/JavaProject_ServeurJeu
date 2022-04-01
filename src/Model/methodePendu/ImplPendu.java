@@ -70,7 +70,6 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
             e.printStackTrace();
         }
 
-        System.out.println(dictionnaire);
     }
 
     @Override

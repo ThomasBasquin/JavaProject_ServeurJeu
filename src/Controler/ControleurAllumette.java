@@ -241,7 +241,7 @@ public class ControleurAllumette implements Initializable {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
         dialog.setTitle("Regles du jeu - Allumettes");
-        dialog.setContentText("Pour gagner, il vous suffits de posséder un nombre impair d'allumettes");
+        dialog.setContentText("Pour gagner, il vous suffit de posseder un nombre impair d'allumettes.");
         dialog.showAndWait();
     }
 

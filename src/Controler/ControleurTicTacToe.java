@@ -84,7 +84,7 @@ public class ControleurTicTacToe implements Initializable {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
         dialog.setTitle("Regles du jeu - Tic Tac Toe");
-        dialog.setContentText("");
+        dialog.setContentText("Afin de gagner aligné trois ronds");
         dialog.showAndWait();
     }
 
@@ -128,11 +128,13 @@ public class ControleurTicTacToe implements Initializable {
         TTT = new implTicTacToe();
     };
 
+    //Bouton rejouer
     @FXML
     void RejouerTicTacToe(ActionEvent event) throws RemoteException {
         initializationPartie();
     }
 
+    //annonce de rejouer quand on a finit
     private void Rejouer(int res) throws IOException {
         String message;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -152,13 +154,11 @@ public class ControleurTicTacToe implements Initializable {
 
         if (option.get() == ButtonType.OK) {
             initializationPartie();
-        } else if (option.get() == ButtonType.CANCEL) {
-            Stage stage =(Stage) btn2.getScene().getWindow();
-            stage.close();
         }
 
     }
 
+    //quand on a jouer, tour de l'ordi
     void tourOrdinateur() throws IOException {
         int coup =TTT.ajoutCoupOrdinateur();
 
@@ -205,7 +205,7 @@ public class ControleurTicTacToe implements Initializable {
     }
 
     void Vainqueur() throws IOException {
-        System.out.println(TTT.getTabRond());
+
         if (TTT.checkVainqueurCroix()== true){
             this.Rejouer(1);
         }else if(TTT.checkVainqueurRond() == true){

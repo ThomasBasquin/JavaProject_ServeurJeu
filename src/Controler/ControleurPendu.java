@@ -77,7 +77,6 @@ public class ControleurPendu implements Initializable {
     @FXML
     private Line pendu9;
 
-
     InterfacePendu pendu;
 
     public void initializationPartie() throws IOException {
@@ -106,13 +105,16 @@ public class ControleurPendu implements Initializable {
         System.out.println(pendu.getLettresDuMot());
         //affiche les tiret du bas
         labelMot.setText(pendu.affichageDuMotUnderscore());
+
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             int port = 8000;
-            pendu = (InterfacePendu) Naming.lookup("rmi://localhost:" + port + "/pendu"); //Recherche du serveur
+            pendu = (InterfacePendu) Naming.lookup(
+                    "rmi://localhost:" + port + "/pendu"); //Recherche du serveur
             initializationPartie();
         } catch (Exception e) {
             System.out.println("Client exception: " + e);
@@ -120,15 +122,20 @@ public class ControleurPendu implements Initializable {
 
     }
 
+    //Bouton rejouer
     @FXML
     private void RejouerPendu(ActionEvent actionEvent) throws IOException {
         initializationPartie();
     }
 
+    //Saisie d'un caractère dans le textfield
     public void onEnter(ActionEvent actionEvent) throws IOException {
         String key = tfpendu.getText();
+        String msg = new String();
         tfpendu.setText("");
-        System.out.println(key);
+        if (key == " ") {
+            msg = "Merci de saisir un champ valide";
+        }
         labelMot.setText(pendu.affichageDuMot(key.charAt(0)));
         if (pendu.isGagner()){
             Rejouer(false);
@@ -137,6 +144,7 @@ public class ControleurPendu implements Initializable {
 
     }
 
+    //Afficher le pendu
     public void afficherPendu() throws IOException {
         switch (pendu.getFaute()){
             case 1:
@@ -177,11 +185,12 @@ public class ControleurPendu implements Initializable {
 
     }
 
+    //Annonce de rejouer quand partie finit
     public void Rejouer(boolean perdu) throws IOException {
         String message;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         if (perdu){
-            message = "Désoler vous n'avez pas trouver le mot";
+            message = "Desoler vous n'avez pas trouver le mot";
             alert.setTitle("Perdu !");
         }else{
             message ="Bravo vous avez gagner";
@@ -213,7 +222,7 @@ public class ControleurPendu implements Initializable {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
         dialog.setTitle("Regles du jeu - Le pendu");
-        dialog.setContentText("Règle Pendu");
+        dialog.setContentText("Saisissez un caractere dans le champ, et entrer. Faites attention, a ne pas vous trompez trop de fois!");
         dialog.showAndWait();
     }
 

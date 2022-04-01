@@ -61,7 +61,7 @@
                <graphic>
                   <ImageView fitHeight="43.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/nathanbb-modified.png" />
+                        <Image url="@images/nathanlogo.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -108,7 +108,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="786.0" layoutY="367.0" mnemonicParsing="false" prefHeight="173.0" prefWidth="190.0" styleClass="buttonJeu" text="Informations" textFill="WHITE">
+      <Button fx:id="buttonInfo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="786.0" layoutY="367.0" mnemonicParsing="false" onAction="#openInfo" prefHeight="173.0" prefWidth="190.0" styleClass="buttonJeu" text="Informations" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
