@@ -79,7 +79,7 @@ public class ControleurTicTacToe implements Initializable {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
         dialog.setTitle("Regles du jeu - Tic Tac Toe");
-        dialog.setContentText("Il vous suffit d'alignée les formes.");
+        dialog.setContentText("");
         dialog.showAndWait();
     }
 
