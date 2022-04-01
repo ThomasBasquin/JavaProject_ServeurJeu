@@ -73,7 +73,7 @@
       <Line fx:id="pendu9" endX="-125.493896484375" endY="31.26513671875" layoutX="852.0" layoutY="169.0" rotate="84.6" startX="-96.493896484375" startY="4.26513671875" strokeWidth="2.0" />
       <TextField fx:id="tfpendu" layoutX="587.0" layoutY="382.0" onAction="#onEnter" prefWidth="158.0" />
       <Button fx:id="buttonRestart" layoutX="383.0" layoutY="544.0" mnemonicParsing="false" onAction="#RejouerPendu" text="Recommencez" />
-      <Label fx:id="labelMot" alignment="CENTER" layoutX="563.0" layoutY="301.0" prefHeight="53.0" prefWidth="206.0" textFill="WHITE">
+      <Label fx:id="labelMot" alignment="CENTER" layoutX="364.0" layoutY="301.0" prefHeight="70.0" prefWidth="637.0" textFill="WHITE">
          <font>
             <Font size="48.0" />
          </font>

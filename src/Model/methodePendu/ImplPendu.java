@@ -13,10 +13,12 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
     ArrayList<String> motChoisit;
     ArrayList<Character> lettresDuMot;
 
+
     public ImplPendu() throws RemoteException {
+
         super();
         motChoisit = new ArrayList<String>();
-        lettresDuMot = new ArrayList<Character>();
+
 
         //Crée une arrayList de mot, qui stock toutes la liste des mots du fichier dictionnaire
         dictionnaire = new ArrayList<String>();
@@ -34,6 +36,7 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
             e.printStackTrace();
         }
 
+        System.out.println(dictionnaire);
     }
 
     @Override
@@ -48,6 +51,7 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
 
     @Override
     public void setLettresDuMot() throws RemoteException {
+        lettresDuMot = new ArrayList<Character>();
         for (int i = 0; i < motChoisit.get(0).length(); i++) {
             lettresDuMot.add(motChoisit.get(0).charAt(i));
         }
@@ -65,17 +69,16 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
 
     @Override
     public String affichageDuMotUnderscore() throws RemoteException {
-        String mot = new String();
+        String underscore = new String();
         for(int i = 0; i < motChoisit.get(0).length(); i++) {
-            mot = mot + '_';
+            underscore = underscore + '_';
         }
-        return mot;
+        return underscore;
     }
 
     @Override
     public String affichageDuMot(char c) throws RemoteException {
         String mot = new String();
-
         for(int i = 0; i < lettresDuMot.size(); i++) {
             if(lettresDuMot.get(i) == c) {
                 mot = mot + c;

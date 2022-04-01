@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
 public class ControleurPendu implements Initializable {
@@ -87,7 +88,7 @@ public class ControleurPendu implements Initializable {
         System.out.println(pendu.getMot());
         //set la liste des lettres du mot
         pendu.setLettresDuMot();
-        System.out.println(pendu.getLettresDuMot().get(0));
+        System.out.println(pendu.getLettresDuMot());
         //affiche les tiret du bas
         labelMot.setText(pendu.affichageDuMotUnderscore());
     }
@@ -109,9 +110,11 @@ public class ControleurPendu implements Initializable {
         initializationPartie();
     }
 
-    public void onEnter(ActionEvent actionEvent) {
+    public void onEnter(ActionEvent actionEvent) throws RemoteException {
         String key = tfpendu.getText();
-
+        tfpendu.setText("");
+        System.out.println(key);
+        labelMot.setText(pendu.affichageDuMot(key.charAt(0)));
     }
 
 
