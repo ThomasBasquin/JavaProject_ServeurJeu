@@ -13,4 +13,12 @@ public interface InterfacePendu extends Remote {
     boolean verifReponse(char c) throws RemoteException;
     String affichageDuMotUnderscore() throws RemoteException;
     String affichageDuMot(char c) throws RemoteException;
+    ArrayList<Character> getLettreTrouve() throws RemoteException;
+    void setLettreTrouve(ArrayList<Character> lettreTrouve) throws RemoteException;
+    int getFaute() throws RemoteException;
+    void setFaute(int faute) throws RemoteException;
+    boolean checkPerdu(boolean trouver) throws RemoteException;
+    boolean isGagner() throws RemoteException;
+    void setGagner(boolean gagner) throws RemoteException;
+
 }

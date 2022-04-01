@@ -12,7 +12,41 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
     ArrayList<String> dictionnaire;
     ArrayList<String> motChoisit;
     ArrayList<Character> lettresDuMot;
+    String mot = new String();
+    ArrayList<Character> lettreTrouve = new ArrayList<>();
+    boolean gagner;
 
+    @Override
+    public boolean isGagner() throws RemoteException{
+        return gagner;
+    }
+
+    @Override
+    public void setGagner(boolean gagner) throws RemoteException {
+        this.gagner = gagner;
+    }
+
+    int faute;
+
+    @Override
+    public int getFaute() throws RemoteException {
+        return faute;
+    }
+
+    @Override
+    public void setFaute(int faute) throws RemoteException{
+        this.faute = faute;
+    }
+
+    @Override
+    public ArrayList<Character> getLettreTrouve() throws RemoteException{
+        return lettreTrouve;
+    }
+
+    @Override
+    public void setLettreTrouve(ArrayList<Character> lettreTrouve) throws RemoteException{
+        this.lettreTrouve = lettreTrouve;
+    }
 
     public ImplPendu() throws RemoteException {
 
@@ -78,14 +112,45 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu, Se
 
     @Override
     public String affichageDuMot(char c) throws RemoteException {
-        String mot = new String();
-        for(int i = 0; i < lettresDuMot.size(); i++) {
-            if(lettresDuMot.get(i) == c) {
-                mot = mot + c;
-            } else if (lettresDuMot.get(i) != c) {
-                mot = mot + '_';
+        mot = "";
+        boolean trouver = false;
+
+        for (int j = 0; j < lettresDuMot.size(); j++) {
+                mot +='_';
+        }
+        StringBuilder newMot = new StringBuilder(mot);
+        for (int i = 0; i < lettresDuMot.size(); i++) {
+            if (lettresDuMot.get(i) == c){
+                lettreTrouve.add(c);
+                newMot.setCharAt(i,c);
+                trouver = true;
+            }
+            for (int j = 0; j < lettreTrouve.size(); j++) {
+                if (lettresDuMot.get(i) == lettreTrouve.get(j)){
+                    newMot.setCharAt(i ,lettreTrouve.get(j))  ;
+                }
             }
         }
-        return mot;
+
+        setGagner(!newMot.toString().contains("_"));
+        checkPerdu(trouver);
+        return newMot.toString();
     }
+
+     @Override
+     public boolean checkPerdu(boolean trouver) throws RemoteException{
+        if (!trouver){
+            if (this.getFaute() == 11){
+                return true;
+            }else{
+                this.setFaute(this.getFaute()+1);
+                return false;
+            }
+        }
+        return false;
+    }
+
+
+
+
 }

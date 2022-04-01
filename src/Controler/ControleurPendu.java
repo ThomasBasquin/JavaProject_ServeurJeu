@@ -1,7 +1,6 @@
 package Controler;
 
 
-import Model.methodePendu.ImplPendu;
 import Model.methodePendu.InterfacePendu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -23,6 +19,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ControleurPendu implements Initializable {
@@ -83,6 +81,23 @@ public class ControleurPendu implements Initializable {
     InterfacePendu pendu;
 
     public void initializationPartie() throws IOException {
+        pendu1.setVisible(false);
+        pendu2.setVisible(false);
+        pendu3.setVisible(false);
+        pendu4.setVisible(false);
+        pendu5.setVisible(false);
+        pendu6.setVisible(false);
+        pendu7.setVisible(false);
+        pendu8.setVisible(false);
+        pendu9.setVisible(false);
+        pendu10.setVisible(false);
+        pendu11.setVisible(false);
+
+        pendu.setGagner(false);
+        pendu.setFaute(0);
+
+        //On remet à zéro les mots trouver
+        pendu.setLettreTrouve(new ArrayList<>());
         //set le mot aléatoire du dictionnaire
         pendu.setMot();
         System.out.println(pendu.getMot());
@@ -110,13 +125,82 @@ public class ControleurPendu implements Initializable {
         initializationPartie();
     }
 
-    public void onEnter(ActionEvent actionEvent) throws RemoteException {
+    public void onEnter(ActionEvent actionEvent) throws IOException {
         String key = tfpendu.getText();
         tfpendu.setText("");
         System.out.println(key);
         labelMot.setText(pendu.affichageDuMot(key.charAt(0)));
+        if (pendu.isGagner()){
+            Rejouer(false);
+        }
+        afficherPendu();
+
     }
 
+    public void afficherPendu() throws IOException {
+        switch (pendu.getFaute()){
+            case 1:
+                pendu1.setVisible(true);
+                break;
+            case 2:
+                pendu2.setVisible(true);
+                break;
+            case 3:
+                pendu3.setVisible(true);
+                break;
+            case 4:
+                pendu4.setVisible(true);
+                break;
+            case 5:
+                pendu5.setVisible(true);
+                break;
+            case 6:
+                pendu6.setVisible(true);
+                break;
+            case 7:
+                pendu7.setVisible(true);
+                break;
+            case 8:
+                pendu8.setVisible(true);
+                break;
+            case 9:
+                pendu9.setVisible(true);
+                break;
+            case 10:
+                pendu10.setVisible(true);
+                break;
+            case 11:
+                pendu11.setVisible(true);
+                Rejouer(true);
+                break;
+        }
+
+    }
+
+    public void Rejouer(boolean perdu) throws IOException {
+        String message;
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        if (perdu){
+            message = "Désoler vous n'avez pas trouver le mot";
+            alert.setTitle("Perdu !");
+        }else{
+            message ="Bravo vous avez gagner";
+            alert.setTitle("Gagner !");
+        }
+        alert.setHeaderText(message);
+        alert.setContentText("Voulez-vous rejouer ?");
+
+        // option != null.
+        Optional<ButtonType> option = alert.showAndWait();
+
+        if (option.get() == ButtonType.OK) {
+            initializationPartie();
+        } else if (option.get() == ButtonType.CANCEL) {
+            Stage stage =(Stage) pendu1.getScene().getWindow();
+            stage.close();
+        }
+
+    }
 
     @FXML
     void goToPageAccueil(ActionEvent event) throws IOException {
