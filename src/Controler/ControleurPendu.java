@@ -22,9 +22,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
-public class ControleurPendu implements Initializable{
+public class ControleurPendu implements Initializable {
 
     private Stage stage;
     private Scene scene;
@@ -81,17 +82,47 @@ public class ControleurPendu implements Initializable{
 
     InterfacePendu pendu;
 
+    public void initializationPartie() throws IOException {
+        //set le mot aléatoire du dictionnaire
+        pendu.setMot();
+        System.out.println(pendu.getMot());
+        //set la liste des lettres du mot
+        pendu.setLettresDuMot();
+        System.out.println(pendu.getLettresDuMot());
+        //affiche les tiret du bas
+        labelMot.setText(pendu.affichageDuMotUnderscore());
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        try {
+            int port = 8000;
+            pendu = (InterfacePendu) Naming.lookup("rmi://localhost:" + port + "/pendu"); //Recherche du serveur
+            initializationPartie();
+        } catch (Exception e) {
+            System.out.println("Client exception: " + e);
+        }
 
     }
+
+    @FXML
+    private void RejouerPendu(ActionEvent actionEvent) throws IOException {
+        initializationPartie();
+    }
+
+    public void onEnter(ActionEvent actionEvent) throws RemoteException {
+        String key = tfpendu.getText();
+        tfpendu.setText("");
+        System.out.println(key);
+        labelMot.setText(pendu.affichageDuMot(key.charAt(0)));
+    }
+
 
     @FXML
     void goToPageAccueil(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("../Vue/VueAccueil.fxml"));
         scene = new Scene(root);
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
@@ -101,10 +132,9 @@ public class ControleurPendu implements Initializable{
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setResizable(false);
         dialog.setTitle("Regles du jeu - Le pendu");
-        dialog.setContentText("Le pendu c'est mal");
+        dialog.setContentText("Règle Pendu");
         dialog.showAndWait();
     }
 
-
-
 }
+
